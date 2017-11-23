@@ -34,6 +34,7 @@ public class ClientThread extends Thread{
 	
 	private void getClientAddress() {
 		String peerInet = client.getInetAddress().toString();
+		peerInet = peerInet.replaceAll("/", "");
 		showMessage(peerInet + "\n");
 		showMessage(peerPort + "\n");
 		String[] peerInfo = {Integer.toString(peerID), peerInet, peerPort};
